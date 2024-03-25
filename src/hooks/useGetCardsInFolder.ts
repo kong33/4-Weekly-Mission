@@ -101,7 +101,7 @@ const useGetCardsInFolder = ({
   }
 
   useEffect(() => {
-    fetchData() // useEffect 내에서 fetchData 호출
+    fetchData()
   }, [clickedButtonId, keyword]) // 의존성 배열에 keyword 추가
 
   return { cardDetail: cardDetailAll } // 검색된 결과만 반환

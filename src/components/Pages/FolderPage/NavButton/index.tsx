@@ -7,11 +7,16 @@ type NavButton = {
   title: string | null
   key: number | null
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void
-  id: string | null | undefined
+  id: number | null | undefined
 }
 const NavButton = ({ title, key, onClick, id }: NavButton) => {
   return (
-    <button key={key} onClick={onClick} css={btnCss} id={id ?? undefined}>
+    <button
+      key={key}
+      onClick={onClick}
+      css={btnCss}
+      id={id ? id.toString() : undefined}
+    >
       {title}
     </button>
   )

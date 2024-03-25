@@ -12,15 +12,17 @@ import '../../../styles/common.css'
 import { divCss, btnCss, outerDivCss } from './styles'
 
 const FolderPage = () => {
-  const [clickedButtonId, setClickedButtonId] = useState<string | null>(null)
+  const [clickedButtonId, setClickedButtonId] = useState<number | null>(null)
   const { buttonsId, buttonsTitle } = useGetButttonList()
   const { cardDetail } = useGetCardsInFolder(clickedButtonId)
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     const target = e.target as HTMLButtonElement
-    setClickedButtonId(target.id)
+    setClickedButtonId(Number(target.id))
   }
-
+  // const handleClick = () => {
+  //   setClickedButtonId : (target.id : number) => void
+  // }
   return (
     <Layout
       children={[
@@ -32,7 +34,7 @@ const FolderPage = () => {
               <NavButton
                 title={button}
                 key={buttonsId[index]}
-                id={buttonsId[index]?.toString()}
+                id={buttonsId[index]}
                 onClick={(e) => handleClick(e)}
               />
             ))}

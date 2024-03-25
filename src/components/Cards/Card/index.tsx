@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { SerializedStyles } from '@emotion/react'
-import {css} from '@emotion/react'
+import { css } from '@emotion/react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import styles from './styles'
@@ -44,7 +44,7 @@ const Card = ({ item }: CardProps) => {
               ${styles.logoCss};
             `}
           />
-          <img css={styles.imgCss} src={imgurl} />
+          <img css={styles.imgCss} src={imgurl || undefined} />
         </div>
 
         <div css={styles.pWrapperCss}>

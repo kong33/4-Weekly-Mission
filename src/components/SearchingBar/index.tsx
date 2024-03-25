@@ -1,20 +1,11 @@
 /** @jsxImportSource @emotion/react */
-import { ChangeEvent, useState, FormEvent } from "react";
-import styles from "./styles";
-import searchImg from "../../assets/Search.png";
-import "../../styles/common.css";
+import styles from './styles'
+import useSearch from 'hooks/useSearch'
+import searchImg from '../../assets/Search.png'
+import '../../styles/common.css'
 //{ onSearch } 프롭으로 넣기
 const SearchingBar = () => {
-  const [keyword, setKeyword] = useState("");
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    setKeyword(e.target.value);
-  };
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
-    e.preventDefault();
-    // onSearch(keyword);
-  };
+  const { keyword, handleChange, handleSubmit, handleCancel } = useSearch()
 
   return (
     <form onSubmit={handleSubmit} css={styles.form}>
@@ -26,8 +17,9 @@ const SearchingBar = () => {
         placeholder="링크를 검색해 보세요"
         css={styles.input}
       />
+      <button onClick={handleCancel}>삭제</button>
     </form>
-  );
-};
+  )
+}
 
-export default SearchingBar;
+export default SearchingBar

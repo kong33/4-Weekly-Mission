@@ -1,12 +1,5 @@
 import { ReactNode, MouseEvent } from 'react'
 
-export interface Item {
-  createdAt: string
-  imageSource?: string
-  description: string
-  id: number
-}
-
 // Modal
 export type ModalProps = {
   children: ReactNode
@@ -22,6 +15,7 @@ export type ButtonProps = {
   children: string
   handleClick: () => void
 }
+
 export type HeaderProps = {
   Title: ReactNode
   Description: ReactNode
@@ -33,21 +27,32 @@ export type Children = {
 
 //useGetButtonList
 export type ButtonListProps = {
-  id: number;
-  created_at : string;
-  name: string;
-  user_id: number;
-  favorite: boolean;
-  link: object;
+  id: number
+  created_at: string
+  name: string
+  user_id: number
+  favorite: boolean
+  link: object
 }
 
-export type LinkListProps = {
-  id: number;
-  created_at: string;
+export interface LinkListProps {
+  id: number
+  created_at: string
   updated_at: string | null
-  url: string;
+  url: string
   title: string | null
   description: string | null
   image_source: string | null
   folder_id: number | null
 }
+export interface Item {
+  id: number
+  createdAt: string
+  updated_at: string | null
+  url: string
+  title: string | null
+  description: string | null
+  imageSource: string | null
+  folder_id: number | null
+}
+//prop 아무데나 붙이지 말기

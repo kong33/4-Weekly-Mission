@@ -4,6 +4,8 @@ import api from '../utils/api'
 
 const useGetButttonList = () => {
   const [buttonsId, setButtonsId] = useState<(number | null)[]>([])
+  //const [buttonsId, setButtonsId] = useState <ButtonListProps[] | []>([]) 
+  //질문! 
   const [buttonsTitle, setButtonsTitle] = useState<(string | null)[]>([])
  
   const fetchData = async () => {

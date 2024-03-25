@@ -1,11 +1,18 @@
 /** @jsxImportSource @emotion/react */
-import "../../../../styles/reset.css";
-import "../../../../styles/common.css";
-import { divCss, imgCss, inputCss, formCss, btnWrapper } from "./styles";
-import linkImg from "../../../../assets/link.png";
-import Button from "../../../utils/Button/Button";
+import '../../../../styles/reset.css'
+import '../../../../styles/common.css'
+import {
+  divCss,
+  imgCss,
+  inputCss,
+  formCss,
+  btnWrapper,
+} from './styles'
+import linkImg from '../../../../assets/link.png'
+import Button from '../../../utils/Button/Button'
 
 const AddLink = () => {
+
   return (
     <div css={divCss}>
       <form css={formCss}>
@@ -16,6 +23,6 @@ const AddLink = () => {
         </div>
       </form>
     </div>
-  );
-};
-export default AddLink;
+  )
+}
+export default AddLink

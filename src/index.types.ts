@@ -38,21 +38,20 @@ export type ButtonListProps = {
 export interface LinkListProps {
   id: number
   created_at: string
-  updated_at: string | null
+  updated_at?: string
   url: string
-  title: string | null
-  description: string | null
-  image_source: string | null
-  folder_id: number | null
-}
+  title?: string 
+  description?: string 
+  image_source?: string 
+  folder_id?: number }
 export interface Item {
   id: number
   createdAt: string
-  updated_at: string | null
+  updated_at?: string 
   url: string
-  title: string | null
-  description: string | null
-  imageSource: string | null
-  folder_id: number | null
+  title?: string
+  description?: string
+  imageSource?: string
+  folder_id?: number
 }
 //prop 아무데나 붙이지 말기

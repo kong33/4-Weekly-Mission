@@ -5,11 +5,11 @@ interface useObserverReturn {
 }
 // IntersectionObserver를 사용하는 훅
 const useObserver = (): useObserverReturn => {
-  const HeaderRef = useRef<HTMLDivElement>(null) 
-  const [isOver, setIsOver] = useState<boolean>(false) 
+  const HeaderRef = useRef<HTMLDivElement>(null)
+  const [isOver, setIsOver] = useState<boolean>(false)
 
   useEffect(() => {
-    const target = HeaderRef.current 
+    const target = HeaderRef.current
 
     const observerCallback = ([entry]: IntersectionObserverEntry[]) => {
       setIsOver(!entry.isIntersecting)
@@ -21,16 +21,15 @@ const useObserver = (): useObserverReturn => {
     })
 
     if (target) {
-      io.observe(target) 
+      io.observe(target)
     }
 
     return () => {
       if (target) {
-        io.unobserve(target) 
+        io.unobserve(target)
       }
     }
   }, [])
-
 
   return { HeaderRef, isOver }
 }

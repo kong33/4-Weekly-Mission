@@ -36,9 +36,7 @@ const FolderPage = () => {
     const target = e.target as HTMLButtonElement
     setClickedButtonId(Number(target.id))
   }
-  // const handleClick = () => {
-  //   setClickedButtonId : (target.id : number) => void
-  // }
+
   return (
     <Layout
       children={[

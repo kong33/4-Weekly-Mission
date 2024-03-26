@@ -21,4 +21,5 @@ const NavButton = ({ title, key, onClick, id }: NavButton) => {
     </button>
   )
 }
+//주석
 export default NavButton

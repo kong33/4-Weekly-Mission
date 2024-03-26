@@ -99,10 +99,11 @@ const useGetCardsInFolder = ({
       setCardDetailAll([])
     }
   }
+  console.log('아휴')
 
   useEffect(() => {
     fetchData()
-  }, [clickedButtonId, keyword]) // 의존성 배열에 keyword 추가
+  }, [clickedButtonId, keyword])
 
   return { cardDetail: cardDetailAll }
 }

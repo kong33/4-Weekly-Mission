@@ -3,7 +3,7 @@ interface useObserverReturn {
   HeaderRef: RefObject<HTMLDivElement>
   isOver: boolean
 }
-// IntersectionObserver를 사용하는 훅
+//주석
 const useObserver = (): useObserverReturn => {
   const HeaderRef = useRef<HTMLDivElement>(null)
   const [isOver, setIsOver] = useState<boolean>(false)

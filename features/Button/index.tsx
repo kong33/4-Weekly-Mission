@@ -2,11 +2,11 @@ import '@/styles/reset.module.scss';
 import '@/styles/common.module.scss';
 import '@/features/Button/style.module.scss';
 
-interface ButtonProps {
+type ButtonProps = {
   title: string;
   size: string;
   isLoading: boolean;
-}
+};
 
 const Button = ({ title, size, isLoading }: ButtonProps) => {
   return (

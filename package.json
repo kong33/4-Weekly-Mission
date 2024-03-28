@@ -19,9 +19,13 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
+<<<<<<< HEAD
     "eslint-config-next": "^13.5.6",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.2.5",
+=======
+    "eslint-config-next": "13.5.6",
+>>>>>>> b163802 (💄 Add common.css)
     "typescript": "^5"
   }
 }

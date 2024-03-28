@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.imgWrapper {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.p {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  position: relative;
+  top: 4px;
+
+  @media screen and (375px <= width <= 767px) {
+    display: none;
+  }
+}

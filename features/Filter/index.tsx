@@ -6,15 +6,15 @@ import { MouseEventHandler } from 'react';
 
 type FilterProps = {
   title: string | null;
-  key: number | null;
+  keyValue: number | null;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   id: number | null | undefined;
 };
 
-const Filter = ({ title, key, onClick, id }: FilterProps) => {
+const Filter = ({ title, keyValue, onClick, id }: FilterProps) => {
   return (
     <button
-      key={key}
+      key={keyValue}
       onClick={onClick}
       className={styles.button}
       id={id ? id.toString() : undefined}

@@ -1,6 +1,6 @@
 import useGetAvatar from '@/shared/hooks/useGetAvatar';
 import Image from 'next/image';
-import Button from '../../../../features/Button';
+import Button from '../../../../components/Button';
 import styles from './style.module.scss';
 const Avatar = () => {
   const { userEmail, userAvatarImg, isLoading } = useGetAvatar();

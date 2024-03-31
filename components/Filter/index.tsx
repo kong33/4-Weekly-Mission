@@ -5,8 +5,8 @@ import styles from './style.module.scss';
 import { MouseEventHandler } from 'react';
 
 type FilterProps = {
-  title: string | null;
-  keyValue: number | null;
+  title?: string;
+  keyValue?: number;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   id: number | null | undefined;
 };

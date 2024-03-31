@@ -5,7 +5,7 @@ import Avatar from './Avatar';
 import Logo from './Logo';
 import Button from '@/components/Button';
 //login 했으면 avatar 띄우고 아니면 button 띄우기
-const AfterLoginHeader = (afterLogin: boolean) => {
+const GlobalNavigationBar = ({ afterLogin }: { afterLogin: boolean }) => {
   return (
     <div className={styles.container}>
       <Logo />
@@ -14,4 +14,4 @@ const AfterLoginHeader = (afterLogin: boolean) => {
     </div>
   );
 };
-export default AfterLoginHeader;
+export default GlobalNavigationBar;

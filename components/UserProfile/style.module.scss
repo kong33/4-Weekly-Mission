@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: var(--Linkbrary-bg);
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+}
+.ownerName{
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+.folderName {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}

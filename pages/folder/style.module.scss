@@ -1,0 +1,29 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--Linkbrary-white);
+}
+
+.container {
+  background-color: var(--Linkbrary-white);
+  padding: 40px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.fixedLinkDefault{
+  position: fixed;
+  bottom: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}

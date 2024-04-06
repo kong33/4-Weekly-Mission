@@ -1,24 +1,30 @@
-// import { useState, useEffect } from 'react';
-// import useMutate from '@/src/shared/hooks/useMutate';
-// import { END_POINT,HTTPMethod } from '@/src/constants';
-// import { avatarData } from '@/src/constants/index.type';
+import { useState, useEffect } from 'react';
+import useMutate from '@/app/lib/hooks/useMutate';
+import { END_POINT, HTTPMethod } from '@/app/lib/constants/index'
 
-// const useGetAvatar = () => {
-//   const [userEmail, setUserEmail] = useState<string>('');
-//   const [userAvatarImg, setUserAvatarImg] = useState<string>('');
+const useGetAvatar = () => {
+  const [userEmail, setUserEmail] = useState<string>('');
+  const [userAvatarImg, setUserAvatarImg] = useState<string>('');
 
-//   const { data, isLoading } = useMutate<avatarData>({
-//     url: END_POINT.AVATAR,
-//     method: HTTPMethod.GET,
-//   });
+  const { data, isLoading } = useMutate<avatarData>({
+    url: END_POINT.AVATAR,
+    method: HTTPMethod.GET,
+  });
 
-//   useEffect(() => {
-//     setUserEmail(data?.email || ''); //undefined 인 경우 '' 넣기
-//     setUserAvatarImg(data?.profileImageSource || '');
-//   }, []);
+  useEffect(() => {
+    setUserEmail(data?.email || ''); //undefined 인 경우 '' 넣기
+    setUserAvatarImg(data?.profileImageSource || '');
+  }, []);
 
-//   return { userEmail, userAvatarImg, isLoading} 
+  return { userEmail, userAvatarImg, isLoading} 
 
-// };
+};
 
-// export default useGetAvatar
+export default useGetAvatar
+
+export type avatarData = {
+    id: number;
+    name: string;
+    email: string;
+    profileImageSource: string;
+  };

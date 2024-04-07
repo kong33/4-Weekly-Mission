@@ -1,7 +1,5 @@
-import Link from 'next/link';
 const Logo = () => {
   return (
-    <Link href="/">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 38">
         <path
           d="M8.95082 24.866V1.25437H0.708252V32.0971H24.401V24.866H8.95082Z"
@@ -40,7 +38,6 @@ const Logo = () => {
           fill="#6D6AFE"
         />
       </svg>
-    </Link>
   );
 };
 

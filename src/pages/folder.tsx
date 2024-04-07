@@ -7,8 +7,14 @@ import useGetClickedCards from "@/features/folderpage/Filter/useGetClickedFilter
 import useObserver from "@/app/lib/hooks/useObserver";
 import { MouseEvent, ChangeEvent } from "react";
 import useDebounce from "@/app/lib/hooks/useDebounce";
+import AddLink from "@/features/folderpage/AddLinkBar";
+import SearchingBar from "@/app/ui/SearchingBar";
+import Filter from "@/features/folderpage/Filter";
+import CardList from "@/features/CardList";
+import styles from '@/styles/FolderPage.module.scss';
 
-const SharedPage : NextPageWithLayout = () => {
+
+const FolderPage : NextPageWithLayout = () => {
     const [clickedFilterId, setClickedFilterId] = useState<number | null>(null);
     const [keyword, setKeyword] = useState('');
     const { filtersId, filtersTitle } = useGetFilters();
@@ -74,7 +80,7 @@ const SharedPage : NextPageWithLayout = () => {
     );
 }
 
-SharedPage.getLayout = function getLayout(page: ReactElement) {
+FolderPage.getLayout = function getLayout(page: ReactElement) {
     return (
         <Layout isLogined = {false}>
             {page}
@@ -82,7 +88,7 @@ SharedPage.getLayout = function getLayout(page: ReactElement) {
     )
 }
 
-export default SharedPage
+export default FolderPage
 
 export interface Item {
   id: number;

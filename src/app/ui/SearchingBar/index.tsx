@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './style.module.scss';
 import { ChangeEventHandler } from 'react';
 import Input from '../Input';
+
 type SearcingBarPrpos = {
   keyword: string;
   handleInputChange: ChangeEventHandler<HTMLInputElement>;

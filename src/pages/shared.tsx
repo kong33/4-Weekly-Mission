@@ -2,6 +2,8 @@ import { ReactElement } from "react";
 import { NextPageWithLayout } from "./_app";
 import Layout from "@/layouts/MainLayout";
 import { useState } from "react";
+import useGetFilters from "@/features/sharedpage/Filter/useGetFilters";
+
 
 const SharedPage : NextPageWithLayout = () => {
     const [clickedFilterId, setClickedFilterId] = useState<number | null>(null);

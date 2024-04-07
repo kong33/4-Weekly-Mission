@@ -1,9 +1,12 @@
 import { ReactElement } from "react";
 import { NextPageWithLayout } from "./_app";
 import Layout from "@/layouts/MainLayout";
-import { useState } from "react";
-import useGetFilters from "@/features/sharedpage/Filter/useGetFilters";
-
+import { useState, useMemo } from "react";
+import useGetFilters from "@/features/folderpage/Filter/useGetFilters";
+import useGetClickedCards from "@/features/folderpage/Filter/useGetClickedFilter";
+import useObserver from "@/app/lib/hooks/useObserver";
+import { MouseEvent, ChangeEvent } from "react";
+import useDebounce from "@/app/lib/hooks/useDebounce";
 
 const SharedPage : NextPageWithLayout = () => {
     const [clickedFilterId, setClickedFilterId] = useState<number | null>(null);
@@ -80,3 +83,14 @@ SharedPage.getLayout = function getLayout(page: ReactElement) {
 }
 
 export default SharedPage
+
+export interface Item {
+  id: number;
+  createdAt: string;
+  updated_at?: string;
+  url: string;
+  title?: string;
+  description?: string;
+  imageSource?: string;
+  folder_id?: number;
+}

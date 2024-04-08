@@ -1,4 +1,4 @@
-import Logo from "@/app/ui/Header/Logo"
+import Logo from "../app/ui/Header/Logo"
 import Link from "next/link"
 import { Fragment, ReactNode } from "react"
 

@@ -1,7 +1,7 @@
 import styles from './style.module.scss';
 import Image from 'next/image';
-import LinkImg from '@/src/public/images/link.png'
-import Button from '@/app/ui/Button';
+import LinkImg from '@/public/images/link.png'
+import Button from '@/src/app/ui/Button';
 
 const AddLink = () => {
   return (

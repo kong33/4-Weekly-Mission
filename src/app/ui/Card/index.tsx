@@ -1,5 +1,5 @@
-import { formatDate } from '@/app/lib/utils/formatDate';
-import { timeCalculator } from '@/app/lib/utils/timeCalculator';
+import { formatDate } from '../../lib/utils/formatDate';
+import { timeCalculator } from '../../lib/utils/timeCalculator';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './style.module.scss';
@@ -8,6 +8,7 @@ import LinkbraryLogo from '@/public/images/linkbraryLogo.png';
 import kebab from '@/public/images/kebab.png';
 import filledStar from '@/public/svgs/filledStar.svg';
 import star from '@/public/svgs/star.svg';
+// import star from '@/public/svgs/star.svg';
 
 interface CardProps {
   createdAt: string;

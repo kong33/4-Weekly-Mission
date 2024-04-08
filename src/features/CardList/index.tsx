@@ -1,5 +1,5 @@
 import styles from './style.module.scss';
-import Card from '@/app/ui/Card';
+import Card from '@/src/app/ui/Card';
 
 const CardList = ({ items }: { items: Item[] | null | undefined }) => {
   if (!(items && items.length))

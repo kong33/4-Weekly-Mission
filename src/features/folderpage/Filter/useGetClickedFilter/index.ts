@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import useMutate from '@/app/lib/hooks/useMutate';
-import { HTTPMethod } from '@/app/lib/constants';
+import useMutate from '@/src/app/lib/hooks/useMutate';
+import { HTTPMethod } from '@/src/app/lib/constants';
 
 const useGetClickedCards = ({ clickedFilterId }: { clickedFilterId: number | null }) => {
   const [cardsDetail, setCardsDetail] = useState<Item[] | null>(null);

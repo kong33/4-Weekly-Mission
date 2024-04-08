@@ -1,6 +1,7 @@
+
 import { useState, useEffect } from 'react';
-import { END_POINT,HTTPMethod } from '@/app/lib/constants/index'
-import useMutate from '@/app/lib/hooks/useMutate';
+import { END_POINT,HTTPMethod } from '@/src/app/lib/constants/index'
+import useMutate from '@/src/app/lib/hooks/useMutate';
 const useGetFilters = () => {
   const [filtersId, setFiltersId] = useState<(number | null)[]>([]);
   const [filtersTitle, setFiltersTitle] = useState<(string | null)[]>([]);

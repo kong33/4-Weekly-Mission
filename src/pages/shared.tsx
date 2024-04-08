@@ -1,11 +1,11 @@
 import { ReactElement , useState, ChangeEvent} from "react";
 import { NextPageWithLayout } from "./_app";
-import Layout from "@/layouts/MainLayout";
-import useGetCardInShared from "@/features/sharedpage/useGetCardInShared";
-import UserProfile from "@/features/sharedpage/UserProfile";
-import SearchingBar from "@/app/ui/SearchingBar";
-import CardList from "@/features/CardList";
-import styles from '@/styles/SharedPage.module.scss'
+import Layout from "@/src/layouts/MainLayout";
+import useGetCardInShared from "@/src/features/sharedpage/useGetCardInShared";
+import UserProfile from "@/src/features/sharedpage/UserProfile";
+import SearchingBar from "@/src/app/ui/SearchingBar";
+import CardList from "@/src/features/CardList";
+import styles from '@/src/styles/SharedPage.module.scss'
 
 const SharedPage : NextPageWithLayout = () => {
  

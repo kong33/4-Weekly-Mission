@@ -1,16 +1,19 @@
-import { ReactElement } from "react";
+import { ReactElement, useState, useMemo, MouseEvent, ChangeEvent } from "react";
+
 import { NextPageWithLayout } from "./_app";
+
 import Layout from "@/layouts/MainLayout";
-import { useState, useMemo } from "react";
+
 import useGetFilters from "@/features/folderpage/Filter/useGetFilters";
 import useGetClickedCards from "@/features/folderpage/Filter/useGetClickedFilter";
-import useObserver from "@/app/lib/hooks/useObserver";
-import { MouseEvent, ChangeEvent } from "react";
 import useDebounce from "@/app/lib/hooks/useDebounce";
+import useObserver from "@/app/lib/hooks/useObserver";
+
 import AddLink from "@/features/folderpage/AddLinkBar";
 import SearchingBar from "@/app/ui/SearchingBar";
 import Filter from "@/features/folderpage/Filter";
 import CardList from "@/features/CardList";
+
 import styles from '@/styles/FolderPage.module.scss';
 
 

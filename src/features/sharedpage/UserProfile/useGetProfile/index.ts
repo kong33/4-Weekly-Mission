@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import useMutate from '@/app/lib/hooks/useMutate';
-import { END_POINT, HTTPMethod } from '@/app/lib/constants/index'
+import useMutate from '@/src/app/lib/hooks/useMutate';
+import { END_POINT,HTTPMethod } from '@/src/app/lib/constants';
 import { OwnerData, FolderData } from './index.types';
 
 const useGetProfile = () => {

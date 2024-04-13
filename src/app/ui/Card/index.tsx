@@ -1,7 +1,7 @@
 import { formatDate } from '../../lib/utils/formatDate';
 import { timeCalculator } from '../../lib/utils/timeCalculator';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styles from './style.module.scss';
 import Image from 'next/image';
 import LinkbraryLogo from '@/public/images/linkbraryLogo.png';
@@ -27,7 +27,7 @@ const Card = ({ createdAt, imageSource, description }: CardProps) => {
 
   return (
     <div className={styles.container}>
-      <Link to="/newPage" className={styles.link}>
+      <Link href="/newPage" className={styles.link}>
         <div
           className={`${styles.imgWrapper} ${Boolean(imageSource) ? styles.withImage : styles.noImage}`}
         >
